@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Sandip University</title>
+  <style>
+    /* ===== Header with Animation ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: linear-gradient(90deg, #1a1a1a, #222, #1a1a1a);
+  border-bottom: 3px solid #ffcc00;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  animation: slideDown 1s ease-out;
+}
+@keyframes slideDown {
+  from { transform: translateY(-80px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 8px #ff6600, 0 0 20px #ffcc00;
+  animation: glowText 2s infinite alternate;
+}
+@keyframes glowText {
+  from { text-shadow: 0 0 8px #ff6600, 0 0 20px #ffcc00; }
+  to   { text-shadow: 0 0 15px #ffee58, 0 0 30px #ffcc00; }
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+nav a:hover {
+  background: rgba(255, 204, 0, 0.15);
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* ===== Marquee Box (Roshan info) ===== */
+.marquee-box {
+  margin: 30px auto;
+  padding: 12px;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff6600, #ffcc00, #ff6600);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 8px #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  animation: pulseBox 2s infinite alternate;
+}
+@keyframes pulseBox {
+  from { box-shadow: 0 0 15px #ff6600; }
+  to   { box-shadow: 0 0 25px #ffcc00; }
+}
+
+/* ===== Other marquees (left/right) ===== */
+.marquee-left, .marquee-right {
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 0;
+}
+
+/* ===== Center card (already animated) ===== */
+.center-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 28px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  width: 85%;
+  max-width: 900px;
+  text-align: center;
+  animation: centerSlide 1s ease, centerPulse 6s ease-in-out infinite;
+}
+@keyframes centerSlide {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes centerPulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.02); }
+}
+
+/* ===== Bottom ticker ===== */
+.bottom-ticker {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  padding: 6px 0;
+  overflow: hidden;
+  border-top: 2px solid #ffcc00;
+}
+.ticker-track {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: tickerMove 25s linear infinite;
+}
+@keyframes tickerMove {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-100%); }
+}
+
+/* ===== About Section ===== */
+.about-section {
+  width: 80%;
+  margin: 80px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  animation: zoomIn 1s ease;
+}
+.about-section h1 {
+  text-align: center;
+  color: #d32f2f;
+  font-size: 2.2em;
+  animation: glowText 2s infinite alternate;
+}
+@keyframes zoomIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* ===== Footer ===== */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">✨ Sandip University ✨</div>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="login.html">Login</a>
+      <a href="Registration Sandip.html">Registration</a>
+      <a href="Course.html">Course</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+    <img src="2 pic.png"width="200="height="100"tittle=" my vivo phone"/>
+
+  <!-- ===== Marquee Section ===== -->
+  <div class="marquee-box">
+    <marquee behavior="alternate" direction="left" scrollamount="6">
+      🚀 <strong>Roshan</strong> | Frontend Developer | BCA 2nd Year | 📱 8505815996 | 📍 Madhubani
+    </marquee>
+  </div>
+
+  <!-- ===== Announcements ===== -->
+  <div class="marquee-wrap">
+    <marquee class="marquee-left" behavior="scroll" direction="left" scrollamount="9" onmouseover="this.stop();" onmouseout="this.start();">
+      🎉 Sandip University - Spring Fest registrations open! | 📚 Workshops on AI & Web Dev — Limited Seats | 🏆 Sports trials on Sept 10.
+    </marquee>
+  </div>
+
+  <div class="marquee-wrap">
+    <marquee class="marquee-right" behavior="scroll" direction="right" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+      🎓 Admission Open for B.Tech, BCA, MBA | Apply Now at Sandip University | 📞 Helpline: +91-xxx-xxxxxxx
+    </marquee>
+  </div>
+
+  <!-- ===== Center announcement ===== -->
+  <div class="marquee-center" aria-live="polite">
+    <div class="center-card">
+      <span class="center-title">✨ Welcome to Sandip University ✨</span>
+      <p class="center-sub">Scholarships available — apply before <strong>September 30, 2025</strong></p>
+    </div>
+  </div>
+
+  <!-- ===== Bottom ticker ===== -->
+  <div class="bottom-ticker">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        🔔 Placement drive: Infosys, TCS, Wipro visiting campus next month •
+        📅 Orientation week starts: Oct 1 •
+        🧑‍🏫 Free seminars on career guidance every Saturday
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== About Section ===== -->
+  <section class="about-section">
+    <h1>About Sandip University</h1>
+    <p>
+      <span class="highlight">Sandip University</span> is one of India’s leading private universities,
+      located in Nashik, Maharashtra and Sijoul, Madhubani (Bihar).
+      The university offers a wide range of programs in engineering,
+      management, law, pharmacy, sciences, and more. It provides
+      world-class infrastructure and a vibrant campus life.
+    </p>
+
+    <ul class="about-points">
+      <li>Modern campus with advanced labs and libraries.</li>
+      <li>Industry collaborations for better placement opportunities.</li>
+      <li>Focus on innovation, research, and practical learning.</li>
+      <li>Student clubs, cultural fests, and sports activities.</li>
+    </ul>
+  </section>
+</body>
+</html>
